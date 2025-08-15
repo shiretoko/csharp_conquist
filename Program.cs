@@ -49,7 +49,7 @@ class Program
     static void Main()
     {
         Random rand = new Random();
-
+        Console.Clear();
         // 1. สร้างพื้นที่ A-L
         string[] areaNames = { "A","B","C","D","E","F","G","H","I","J","K","L" };
         Area[] map_area = areaNames.Select(n => new Area(n)).ToArray();
@@ -61,6 +61,9 @@ class Program
         int aiCount = int.Parse(Console.ReadLine());
         int totalPlayers = humanCount + aiCount;
         if(totalPlayers > 5) totalPlayers = 5;
+
+        // **เคลียร์หน้าจอก่อนเริ่มเกม**
+        Console.Clear();
 
         // 3. สร้างผู้เล่น
         List<Player> players = new List<Player>();
